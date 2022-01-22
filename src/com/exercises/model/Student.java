@@ -2,17 +2,18 @@ package com.exercises.model;
 
 public class Student {
     private String name;
-    private String grade;
+    public Grade grade;
     private int group;
-    private final String secretNickName = "MySecretNickName";
+    private final String SECRET_NICKNAME = "MySecretNickName";
 
-    public Student(String name, String grade, int group) {
+    public Student(String name, Grade grade, int group) {
         this.name = name;
         this.grade = grade;
         this.group = group;
     }
 
-    public String getStudentGrade() {
+
+    public Grade getStudentGrade() {
         return grade;
     }
 
@@ -20,33 +21,32 @@ public class Student {
         return name;
     }
 
-
-    public String upgrade(String grade) {
-        if (grade.equals("B")) {
-            grade = "A";
-        } else if (grade.equals("C")) {
-            grade = "B";
-        } else if (grade.equals("D")) {
-            grade = "C";
-        } else if (grade.equals("E")) {
-            grade = "D";
-        } else if (grade.equals("F")) {
-            grade = "E";
+    public Grade upgrade(Grade grade) {
+        if (grade.equals(Grade.B)) {
+            grade = Grade.A;
+        } else if (grade.equals(Grade.C)) {
+            grade = Grade.B;
+        } else if (grade.equals(Grade.D)) {
+            grade = Grade.C;
+        } else if (grade.equals(Grade.E)) {
+            grade = Grade.D;
+        } else if (grade.equals(Grade.F)) {
+            grade = Grade.E;
         }
         return grade;
     }
 
-    public String downgrade(String grade) {
-        if (grade.equals("A")) {
-            grade = "B";
-        } else if (grade.equals("B")) {
-            grade = "C";
-        } else if (grade.equals("C")) {
-            grade = "D";
-        } else if (grade.equals("D")) {
-            grade = "E";
-        } else if (grade.equals("E")) {
-            grade = "F";
+    public Grade downgrade(Grade grade) {
+        if (grade.equals(Grade.A)) {
+            grade = Grade.B;
+        } else if (grade.equals(Grade.B)) {
+            grade = Grade.C;
+        } else if (grade.equals(Grade.C)) {
+            grade = Grade.D;
+        } else if (grade.equals(Grade.D)) {
+            grade = Grade.E;
+        } else if (grade.equals(Grade.E)) {
+            grade = Grade.F;
         }
         return grade;
     }
