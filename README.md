@@ -1,6 +1,6 @@
 # class-diagrams-exercises
 
-**About the project: **
+**About the project:**
 
 This project has an exercise which has been implemented to fulfil the requirement of school to manage grades of students for the Mathematics class. We can input the grades of students to the system and it has following features :
 1. Each student has a name, grade, group and a secretNickName. 
